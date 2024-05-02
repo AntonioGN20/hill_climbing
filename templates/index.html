@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mejor Ruta</title>
+    <style>
+        body {
+            background-color: #ffe0b2; /* Fondo en tono cálido */
+            font-family: 'Arial', sans-serif;
+            color: #8e0023; /* Texto en tono cálido */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff5722; /* Color de encabezado en tono cálido */
+        }
+
+        p {
+            color: #d84315; /* Color de texto normal en tono cálido */
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            max-width: 300px; /* Ancho máximo del contenedor */
+            margin: 0 auto; /* Centrar el contenedor */
+        }
+
+        li {
+            background-color: #ffccbc; /* Fondo de cada elemento en tono cálido */
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 120px; /* Ancho mínimo de cada elemento */
+            margin-bottom: 10px;
+        }
+
+        p.distancia {
+            color: #ff5722; /* Color de texto especial en tono cálido */
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mejor Ruta</h1>
+    <p>La mejor ruta encontrada es:</p>
+    <ul>
+        {% for ciudad in mejor_ruta %}
+            <li>{{ ciudad }}</li>
+        {% endfor %}
+    </ul>
+    <p class="distancia">La distancia total recorrida es: {{ distancia_total }}</p>
+</body>
+</html>
+
+
